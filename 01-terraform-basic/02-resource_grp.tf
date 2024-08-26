@@ -6,6 +6,7 @@ resource "azurerm_resource_group" "aks" {
 
 # create a data source for aks versions to latest, excluding preview versions
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/kubernetes_service_versions
+
 data "azurerm_kubernetes_service_versions" "current" {
   location = var.location
   include_preview = false  

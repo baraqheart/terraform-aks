@@ -15,7 +15,7 @@ This project contains a step by step information on how to provision aks using [
 
 05. create the cluster specifying the types of nodes to included in it
 
-06. it is important to output some information about the cluster, so be sure to include it in the output file
+06. it is important to output some information about the cluster, so be sure to include it in the terraform files
 
 07. variables promotes readability and reusability in our code.
     it is an efficient way to manage any code

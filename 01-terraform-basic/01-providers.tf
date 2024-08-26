@@ -26,9 +26,9 @@ terraform {
 # remote backend for state file
    
     backend "azurerm" {
-    resource_group_name  = ""  # 
-    storage_account_name = ""                      # 
-    container_name       = ""                       # 
+    resource_group_name  = var.rg_name  # 
+    storage_account_name = "${var.project_name}-storage_acc"                      # 
+    container_name       = "${var.project_name}-container"                       # 
     key                  = "prod.terraform.tfstate"        # 
  
   }
