@@ -2,6 +2,11 @@
 
 This project contains a step by step information on how to provision aks using [terraform]()
 
+Prerequisites:
+- create a seperate resource group for backend files
+- create a storage account with a unique name in the resource  group created in the previous step
+- create a container with 'terraform' name
+
 01. write out all the neccesary providers to complete the project, which are:
 - azurerm
 - azuread

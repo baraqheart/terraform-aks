@@ -1,36 +1,36 @@
 terraform {
   required_providers {
 
-# azurerm providers   
+    # azurerm providers   
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.113.0"
     }
-  
 
-# azuread providers
+
+    # azuread providers
     azuread = {
-      source = "hashicorp/azuread"
+      source  = "hashicorp/azuread"
       version = "2.53.1"
     }
 
 
-# random providers
+    # random providers
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.6.2"
     }
 
- }
+  }
 
-# remote backend for state file
-   
-    backend "azurerm" {
-    resource_group_name  = var.rg_name  # 
-    storage_account_name = "${var.project_name}-storage_acc"                      # 
-    container_name       = "${var.project_name}-container"                       # 
-    key                  = "prod.terraform.tfstate"        # 
- 
+  # remote backend for state file
+
+  backend "azurerm" {
+    resource_group_name  = "aks_rg"
+    storage_account_name = "aksstorageacct12"
+    container_name       = "terraform"
+    key                  = "prod.terraform.tfstate"
+
   }
 
 }
@@ -38,6 +38,6 @@ terraform {
 # configuration for azurerm
 
 provider "azurerm" {
-     features {}
+  features {}
 }
 
